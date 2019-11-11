@@ -22,18 +22,5 @@ pipeline{
         }
       }
     }
-
-    stage('Desplegar') {
-      steps {
-        script {
-          openshift.withCluster() {
-            openshift.withProject('poc') {
-              openshift.selector("dc", "python-example").rollout().latest();
-            }
-          }
-        }
-      }
-    } 
-
   }
 }
