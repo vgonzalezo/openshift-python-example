@@ -1,9 +1,4 @@
 pipeline{
-  agent { 
-    node {
-      label 'maven'
-    } 
-  }
   stages{
     stage ('Checkout codigo fuente'){
       steps{
