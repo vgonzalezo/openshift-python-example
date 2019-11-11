@@ -3,3 +3,4 @@ webdriver-manager
 pyvirtualdisplay
 xvfbwrapper
 selenium
+phantomjs-binary
