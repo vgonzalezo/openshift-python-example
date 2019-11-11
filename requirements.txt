@@ -1,0 +1,5 @@
+flask
+webdriver-manager
+pyvirtualdisplay
+xvfbwrapper
+selenium

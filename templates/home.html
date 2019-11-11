@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+        
+                function submit(element){
+                    var cantidades = [];
+                    cantidades.push(element.id);
+                    var cantidad1 = $("input[name='cant1']").val()
+                    var cantidad2 = $("input[name='cant2']").val()
+                    cantidades.push(cantidad1);
+                    cantidades.push(cantidad2);
+                    console.log(cantidades)
+                    $.post('', {data:cantidades});
+                      
+               }
+
+</script>
+</head>
+<body>
+
+<h1>Descargas de imagenes</h1>
+<p>Estos scripts descargan imagenes random</p>
+      <ul>
+            {% for elem in paginas %}
+            <span>{{elem}}</span>
+            {% endfor %}
+      </ul>
+Cantidad de imagenes 1: <input type="text" name='cant1' placeholder="5" >
+<button class="btn btn-success" onclick=submit(this) id='1'>Activar 1</button>
+
+<br>
+Cantidad de imagenes 2: <input type="text" name='cant2' placeholder="5" >
+<button class="btn btn-success" onclick=submit(this) id='2'>Activar 2</button>
+
+<br>
+<a class="btn btn-success" href="{{ url_for('download', filename='output_1.txt') }}">Descargar output_1</a>
+<a class="btn btn-success" href="{{ url_for('download', filename='output_2.txt') }}">Descargar output_2</a>
+
+
+</body>
+</html>
+</body>
+</html>
