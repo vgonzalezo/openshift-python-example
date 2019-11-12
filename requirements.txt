@@ -4,4 +4,3 @@ pyvirtualdisplay
 xvfbwrapper
 selenium
 phantomjs-binary
-phantomjs
