@@ -8,7 +8,7 @@ pipeline{
       }
     }
 
-    stage ('Registrar Docker') {
+    stage ('Desplegar contenedor') {
       steps{
         script {
           openshift.withCluster() {
